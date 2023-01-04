@@ -22,9 +22,9 @@ public class googlerunner {
         button.click();
 
         //explicit wait
-        //WebElement waitchecker = new WebDriverWait(driver,Duration.ofSeconds(10))
-                //.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a [@class='gb_7 gb_8 gb_de gb_dd']")));
-       // waitchecker.click();
+        WebElement waitchecker = new WebDriverWait(driver,Duration.ofSeconds(10))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a [@class='gb_7 gb_8 gb_de gb_dd']")));
+        waitchecker.click();
 
 
 
