@@ -8,7 +8,7 @@ import java.time.Duration;
 
 
 public class seleniumWebForm {
-    public static void main (String[] args) {
+    public static void main (String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         /*Implicit wait
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -27,6 +27,8 @@ public class seleniumWebForm {
        submitButt.click();
 
 
-       //driver.close();
+
+       Thread.sleep(2000);
+       driver.close();
     }
 }
