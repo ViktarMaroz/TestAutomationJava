@@ -13,7 +13,6 @@ public class dragAndDrop {
             WebDriver driver = new ChromeDriver();
 
 
-
             try {
                 driver.get("https://crossbrowsertesting.github.io/drag-and-drop.html");
                 Thread.sleep(2000);
@@ -24,9 +23,24 @@ public class dragAndDrop {
 
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
-            }finally{
-                Thread.sleep(20000);
-                driver.quit();}
+            }
+
+            try{
+                driver.get("https://www.selenium.dev/selenium/web/droppableItems.html");
+                Thread.sleep(2000);
+                WebElement drag = driver.findElement(By.id("draggable"));
+                WebElement drop = driver.findElement(By.id("droppable"));
+                Actions dragAndD = new Actions(driver);
+                dragAndD.dragAndDrop(drag,drop).build().perform();
+                System.out.println("The specified elements are draganddropped successfully!");
+            }
+            catch (InterruptedException e){
+                throw new RuntimeException(e);
+            }
+            finally{
+                Thread.sleep(1000);
+                driver.quit();
+            }
 
         /*
         actions
