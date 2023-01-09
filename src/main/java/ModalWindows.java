@@ -34,13 +34,13 @@ public class ModalWindows {
             Thread.sleep(2000);
             prompt.accept();
             Thread.sleep(2000);
-            alert.accept();
+            Alert alert1 = wait.until(alertIsPresent());
+            alert1.accept();
 
             mwthree.click();
-            Alert alertMwThree = wait.until(alertIsPresent());
+            Alert alert2 = wait.until(alertIsPresent());
             Thread.sleep(2000);
-            alertMwThree.dismiss();
-
+            alert2.dismiss();
 
 
         } catch (InterruptedException e) {
