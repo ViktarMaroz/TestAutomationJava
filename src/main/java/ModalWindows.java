@@ -17,7 +17,7 @@ public class ModalWindows {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         try {
             driver.get("https://viktarmaroz.github.io/WebPage");
-            Thread.sleep(5000);
+            Thread.sleep(2000);
 
             WebElement mwone = driver.findElement(By.id("a"));
             WebElement mwtwo = driver.findElement(By.id("b"));
@@ -25,18 +25,20 @@ public class ModalWindows {
 
             mwone.click();
             Alert alert = wait.until(alertIsPresent());
-            Thread.sleep(5000);
+            Thread.sleep(2000);
             alert.accept();
 
             mwtwo.click();
             Alert prompt = wait.until(alertIsPresent());
             prompt.sendKeys("Hi! Here we are!");
-            Thread.sleep(5000);
+            Thread.sleep(2000);
             prompt.accept();
+            Thread.sleep(2000);
+            alert.accept();
 
             mwthree.click();
             Alert alertMwThree = wait.until(alertIsPresent());
-            Thread.sleep(5000);
+            Thread.sleep(2000);
             alertMwThree.dismiss();
 
 
