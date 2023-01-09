@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 
-public class seleniumWebForm {
+public class SeleniumWebForm {
     public static void main (String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         /*Implicit wait
