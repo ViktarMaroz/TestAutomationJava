@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class WaitForVanish {
+public class Three_WaitForVanish {
     public static void main (String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
 

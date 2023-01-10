@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.Set;
 
-public class BrowserTabsOrWindows {
+public class Five_BrowserTabsOrWindows {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -22,7 +22,7 @@ public class BrowserTabsOrWindows {
             String window1 = driver.getWindowHandle();
 
             //second window/tab:
-            js.executeScript("window.open()");
+            js.executeScript("window.open();");
 
             //with its descriptor:
             Set<String> currentWindows = driver.getWindowHandles();
